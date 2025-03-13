@@ -1,5 +1,6 @@
 set clipboard=unnamedplus
 
+
 inoremap jk <Esc>
 nnoremap cpa ggVG"+y
 " ban vector 
@@ -27,11 +28,11 @@ vnoremap <A-k>   :m '<-2<CR>gv=
 vnoremap <A-j> :m '>+1<CR>gv=
 
 
-call plug#begin('./plugged')
+call plug#begin('/home/lixc/myConfig/nvim/plugged')
 Plug 'skywind3000/vim-auto-popmenu'
 Plug 'skywind3000/vim-dict'
 " 设定需要生效的文件类型，如果是 "*" 的话，代表所有类型
-let g:apc_enable_ft = {'text':1, 'markdown':1, 'java':1}
+let g:apc_enable_ft = {'*':1}
 " 设定从字典文件以及当前打开的文件里收集补全单词，详情看 ':help cpt'
 set cpt=.,k,w,b,kspell,k/home/lixc/myConfig/nvim/plugged/vim-dict/dict/*
 
