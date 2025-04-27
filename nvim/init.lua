@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-
+vim.o.clipboard = "unnamedplus"
 -- 在插入模式下，按 jk 返回普通模式
 vim.api.nvim_set_keymap('i', 'jk', '<Esc>', { noremap = true, silent = true })
 
@@ -36,3 +36,5 @@ end, { noremap = true, silent = true })
 
 -- 终端模式下，jk回到普通模式
 vim.keymap.set('t', 'jk', '<C-\\><C-n>', { noremap = true, silent = true })
+
+
