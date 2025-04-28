@@ -6,6 +6,8 @@ vim.api.nvim_set_keymap('i', 'jk', '<Esc>', { noremap = true, silent = true })
 -- 复制当前文件内容到系统剪贴板
 vim.api.nvim_set_keymap('n', 'cpa', 'ggVG"+y', { noremap = true, silent = true })
 
+vim.api.nvim_set_keymap('v', '<leader>y', '"+y', {noremap = true, silent = true })
+
 -- 禁用方向键（避免在 Vim 中误触）
 vim.api.nvim_set_keymap('n', '<Up>', '<NOP>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Down>', '<NOP>', { noremap = true, silent = true })
@@ -36,5 +38,15 @@ end, { noremap = true, silent = true })
 
 -- 终端模式下，jk回到普通模式
 vim.keymap.set('t', 'jk', '<C-\\><C-n>', { noremap = true, silent = true })
+
+
+vim.cmd([[
+  call plug#begin('~/.local/share/nvim/plugged')
+
+  " 在这里添加你的插件
+
+  call plug#end()
+]])
+
 
 
